@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Black and White",
+    "version": "0.0.1",
+    "description": "A chrome extension to turn your website black and white",
+   
+    "permissions": [
+        "activeTab"
+    ],
+
+    "icons": {
+        "16": "icon/icon16.png",
+        "48": "icon/icon48.png",
+        "96": "icon/icon96.png"
+    },
+
+    "action": {
+        "default_popup": "Popup/index.html"
+    },
+
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/content.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
